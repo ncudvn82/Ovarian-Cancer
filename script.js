@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('content.json')
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             articles = data.documents.items || [];
             document.getElementById('title').textContent = data.hero.title;
             document.getElementById('headtitle').textContent = data.siteTitle;
